@@ -1,0 +1,5 @@
+Student name: Emmett Olson
+Student number: 701105
+Student class: IT1E
+URL student GitHub website: https://emmettolson.github.io/
+URL student GitHub repository: https://github.com/EmmettOlson/webmarkup-assessment
