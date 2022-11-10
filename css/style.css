@@ -1,0 +1,411 @@
+body
+{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+header
+{
+	width: 100%;
+}
+
+footer
+{
+	width: 100%;
+}
+
+.aside
+{
+	display: flex;
+	flex-direction: column;
+	z-index: 1;
+	top: 300px;
+	right: 15px;
+	width: 200px;
+}
+
+#cookie
+	{
+		position: fixed;
+		background-color: #FA0;
+		color: #FFF;
+		opacity: 50%;
+		bottom: 0;
+		right: 0;
+		width: 300px;
+		text-align: center;
+		z-index: 9999;
+	}
+
+/*-----PC-----*/
+@media only screen and (min-width: 1280px)
+{
+	/*-----Index-----*/
+	.flexParent
+		{
+			display: flex;
+			flex-direction: column;
+			border-width: 2px;
+			border-color: black;
+			width: calc(100% - 200px);
+		}
+
+	/*#hamburger{
+		display: none;
+	}*/
+		
+	.IndexImages
+		{
+			clear: both;
+			float: right;
+		}
+
+	#articlesHomepage1,
+	#articlesHomepage2,
+	#articlesHomepage3 
+	{
+		margin: 5px;
+		border: #000 2px solid;
+		flex-basis: 0%;
+		flex-shrink: 0;
+		flex-grow: 0;
+	}
+
+	#hamburgerNavigation
+	{
+		display:none;
+	}
+
+	/*----Product----*/
+	#articleSection {  display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+		gap: 0px 0px;
+		grid-auto-flow: row;
+		grid-template-areas:
+		  "article2 . ."
+		  ". . ."
+		  ". . article3"
+		  ". article1 ."
+		  "article5 . ."
+		  ". . article4"
+		  ". article6 .";
+	  }
+	  
+	  #article3 { grid-area: article3; }
+	  
+	  #article2 { grid-area: article2; }
+	  
+	  #article1 { grid-area: article1; }
+	  
+	  #article5 { grid-area: article5; }
+	  
+	  #article4 { grid-area: article4; }
+	  
+	  #article6 { grid-area: article6; }
+
+	#asideForProduct {  display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr;
+	gap: 0px 0px;
+	grid-auto-flow: row;
+	grid-template-areas:
+		"innovationImage1 innovationImage2 innovationImage3";
+	width: 100%;
+	}
+	
+	#innovationImage1 {
+	grid-area: innovationImage1;
+	width: 33%;
+	}
+	
+	#innovationImage2 {
+	grid-area: innovationImage2;
+	width: 33%;
+	}
+	
+	#innovationImage3 {
+	grid-area: innovationImage3;
+	width: 33%;
+	}   
+
+	/*----Pricing----*/
+	
+	thead
+	{
+
+	}
+
+	
+}
+
+/*----Tablet----*/
+@media only screen and (min-width: 481px) and (max-width: 1279px)
+{
+	/*-----Index-----*/
+	.flexParent
+		{
+			display: flex;
+			flex-direction: column;
+			border-width: 2px;
+			border-color: black;
+		}
+
+	.aside
+	{
+		flex-direction: column;
+		width: 100%;
+	}
+		
+	.IndexImages
+		{
+			clear: both;
+			float: left;
+		}
+
+	.articlesHomepage
+		{
+			flex: 1 0 1000px;
+			flex-wrap: wrap;
+		}
+
+	#articlesHomepage1{order:3;}
+	#articlesHomepage2{order:2;}
+	#articlesHomepage3{order:1;}
+	
+	.flexParent{order:2;}
+	.aside{order:1;}
+	.Index-Footer{order:3;}
+
+	#articlesHomepage1,
+	#articlesHomepage2,
+	#articlesHomepage3 
+	{
+		margin: 5px;
+		border: #000 2px solid;
+		flex-basis: 0%;
+		flex-shrink: 0;
+		flex-grow: 0;
+	}
+
+	#hamburgerNavigation
+	{
+		display:none;
+	}
+
+	/*-----Product-----*/
+
+	#articleSection {  display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+		gap: 0px 0px;
+		grid-auto-flow: row;
+		grid-template-areas:
+		  "article1 ."
+		  ". ."
+		  ". article2"
+		  "article3 ."
+		  ". article5"
+		  ". ."
+		  "article6 ."
+		  ". .";
+	  }
+	  
+	  #article1 { grid-area: article1; }
+	  
+	  #article2 { grid-area: article2; }
+	  
+	  #article3 { grid-area: article3; }
+	  
+	  #article5 { grid-area: article5; }
+	  
+	  #article6 { grid-area: article6; }
+
+	  #article4
+	  {
+		display: none;
+	  }
+
+	#asideForProduct {  display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr;
+	gap: 0px 0px;
+	grid-auto-flow: row;
+	grid-template-areas:
+		"innovationImage1 innovationImage2";
+	width: 100%
+	}
+	
+	#innovationImage1 
+	{ 
+		grid-area: innovationImage1;
+		width: 50%;
+	}
+	
+	#innovationImage2 
+	{ 
+		grid-area: innovationImage2;
+		width: 50%
+	}
+
+	#innovationImage3 
+	{
+		display: none;
+	}
+	  
+}
+
+/*----Phone----*/
+@media only screen and (max-width: 480px)
+{
+	/*-----Index-----*/
+
+	.IndexImages
+	{
+		clear: both;
+	}
+
+	.logo
+	{
+		display: none;
+	}
+
+	video
+	{
+		display: none;
+	}
+
+	.navigation
+	{
+		display: none;
+	} 
+
+	#hamburgerNavigation
+	{
+		position: static
+	}
+
+	#hamburgerOptions a
+	{
+		display: block;
+		width: 100%;
+		padding: 10px;
+		font-size: 15px;
+	}
+
+	#hamburgerNavigation label img
+	{
+		display: block;
+		float: right;
+		font-style: normal;
+		position: absolute;
+		top: 5px;
+		right: 15px;
+		width: 30px;
+		height: 30px;
+		padding: 0px;
+		font-size: 50px;
+	}
+
+	#hamburgerOptions
+	{
+		display: none;
+	}
+
+	#hamburgerNavigation input:checked + #hamburgerOptions
+	{
+		display: block;
+		background-color: white;
+		padding: 15px;
+		border-width: 15px;
+		position: absolute;
+		top: 40px;
+		right: 15px;
+	}
+
+	#hamburgerMenu
+	{
+		display: none;
+	}
+
+	/*-----Product-----*/
+
+	#articleSection {  display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+		grid-auto-columns: 1fr;
+		gap: 0px 0px;
+		grid-auto-flow: row;
+		grid-template-areas:
+		  "."
+		  "article5"
+		  "."
+		  "."
+		  "article3"
+		  "."
+		  "."
+		  "article2"
+		  "."
+		  "."
+		  "article1"
+		  ".";
+	  }
+	  
+	  #article5 { grid-area: article5; }
+	  
+	  #article3 { grid-area: article3; }
+	  
+	  #article2 { grid-area: article2; }
+	  
+	  #article1 { grid-area: article1; }
+
+	  #article4
+	  {
+		display: none;
+	  }
+
+	  #article6
+	  {
+		display: none;
+	  }
+	  
+	#asideForProduct {  display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr 1fr 1fr;
+	grid-auto-columns: 1fr;
+	gap: 0px 0px;
+	grid-auto-flow: row;
+	grid-template-areas:
+		"innovationImage1"
+		"innovationImage2"
+		"innovationImage3";
+	}
+	
+	#innovationImage1 { grid-area: innovationImage1; }
+	
+	#innovationImage2 { grid-area: innovationImage2; }
+	
+	#innovationImage3 { grid-area: innovationImage3; }
+	  
+}
+
+
+/*#grid-container
+	{
+		background-color: #F8F;
+		border: solid 10px #F0F;
+		padding: 10px;
+		
+		display: grid;
+		grid-template-columns: auto auto auto auto;
+		grid-gap: 10px;
+	}
+	
+#grid-container > article
+	{
+		background-color: #EEE;
+		border: solid 10px #666;
+		text-align: center;
+		padding: 20px 0;
+		font-size: 30px;
+	}*/
