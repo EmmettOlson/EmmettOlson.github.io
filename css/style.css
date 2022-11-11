@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Notable&display=swap');
+
 body
 {
 	display: flex;
 	flex-wrap: wrap;
+	font-family: Arial, Helvetica, sans-serif;
 }
 
 header
@@ -24,6 +27,71 @@ footer
 	width: 200px;
 }
 
+#FirstContactHead
+{
+	color: #18D01B;
+}
+
+#SecondContactHead
+{
+	color: #7905E7;
+	letter-spacing: 5px;
+	line-height: 1em;
+	text-indent: 1px;
+	word-spacing: 1rem;
+	font-family: 'Notable', sans-serif;
+	text-transform: uppercase;
+}
+
+#SecondContactHead::first-letter
+{
+	color: green;
+}
+
+img + figcaption {
+	background-color: #FDFFFD;
+}
+
+article > h3 {
+	background-color: #FDFFFD;
+}
+
+#ThirdContactHead
+{
+	color: #FC7300;
+	font-family: 'Notable', sans-serif;
+}
+
+#FourthContactHead
+{
+	color: #100DD5;
+}
+
+#ContactImage1
+{
+	color: #EA08DC;
+}
+
+#ContactImage2
+{
+	color: #EAE300;
+}
+
+#ContactImage3
+{
+	color: #00E3EA;
+}
+
+.articlesHomepage article a:hover
+{
+	color: #FF0000;
+}
+
+.articlesHomepage article a:active
+{
+	color: #04FF0B;
+}
+
 #cookie
 	{
 		position: fixed;
@@ -37,6 +105,34 @@ footer
 		z-index: 9999;
 	}
 
+table, thead, tbody, tr, th, td
+{
+	border: 1px solid #000;
+	border-style: double;
+	border-width: 1px;
+	background-color: grey;
+}
+
+table td:first-child
+{
+	color: #FF0
+}
+
+table tr:nth-child(even)
+{
+	color: #CFF;
+}
+
+table tr:nth-child(odd)
+{
+	color: #FFF;
+}
+
+.hidden
+{
+	display: none;
+}
+
 /*-----PC-----*/
 @media only screen and (min-width: 1280px)
 {
@@ -46,14 +142,14 @@ footer
 			display: flex;
 			flex-direction: column;
 			border-width: 2px;
-			border-color: black;
+			border-color: #000;
 			width: calc(100% - 200px);
 		}
 
 	/*#hamburger{
 		display: none;
 	}*/
-		
+
 	.IndexImages
 		{
 			clear: both;
@@ -130,13 +226,57 @@ footer
 	}   
 
 	/*----Pricing----*/
-	
-	thead
-	{
 
+	#PricingInnovations
+	{
+		float: left;
+		width: 75%
+	}
+	
+	section
+	{
+		float: left;
+		width: 75%;
 	}
 
+	table
+	{
+		width: 100%;
+	}
+
+	th, td
+	{
+		padding: 15px;
+	}
+
+	thead{order:1;}
+	tbody{order:2;}
+	#pricingFooter{order:3;}
 	
+	#pricingAside
+	{
+		display: flex;
+		flex-direction: column;
+		float: right;
+		width: 25%
+	}
+
+	/*-----Contact-----*/
+
+	#contactSection
+	{
+		float: left;
+		width: 75%;
+	}
+
+	#contactAside
+	{
+		display: flex;
+		flex-direction: column;
+		float: right;
+		width: 25%
+	}
+
 }
 
 /*----Tablet----*/
@@ -148,14 +288,24 @@ footer
 			display: flex;
 			flex-direction: column;
 			border-width: 2px;
-			border-color: black;
+			border-color: #000;
 		}
 
 	.aside
-	{
-		flex-direction: column;
-		width: 100%;
-	}
+		{
+			flex-direction: column;
+			width: 100%;
+		}
+
+	.IndexHeader
+		{
+			width: 100%;
+		}
+
+	video
+		{
+			order: 2;
+		}
 		
 	.IndexImages
 		{
@@ -252,6 +402,45 @@ footer
 	{
 		display: none;
 	}
+
+	/*----Pricing----*/
+
+	#PricingImage1
+	{
+		display: none;
+	}
+
+	#pricingAside
+	{
+		display: flex;
+		flex-direction: row;
+	}
+
+	#PricingImage2
+	{
+		float: left;
+	}
+
+	#PricingImage3
+	{
+		float: right;
+	}
+
+	/*-----Contact-----*/
+
+	#contactSection
+	{
+		float: left;
+		width: 75%;
+	}
+
+	#contactAside
+	{
+		display: flex;
+		flex-direction: column;
+		float: right;
+		width: 25%
+	}
 	  
 }
 
@@ -260,9 +449,25 @@ footer
 {
 	/*-----Index-----*/
 
+	.flexParent
+	{
+		display: flex;
+		flex-direction: column-reverse;
+		order: 2;
+	}
+
+	.articlesHomepage
+	{
+		display: flex;
+		flex-direction: column;
+	}
+	
 	.IndexImages
 	{
 		clear: both;
+		display: block;
+  		margin-left: auto;
+  		margin-right: auto;
 	}
 
 	.logo
@@ -270,9 +475,39 @@ footer
 		display: none;
 	}
 
+	.aside
+	{
+		order: 1;
+	}
+
+	.Index-Footer
+	{
+		order: 3;
+	}
+
 	video
 	{
 		display: none;
+	}
+
+	.articlesHomepage header
+	{
+		order: 1;
+	}
+
+	.articlesHomepage article
+	{
+		order: 2;
+	}
+
+	.articlesHomepage .IndexImages
+	{
+		order: 3;
+	}
+
+	.articlesHomepage footer
+	{
+		order: 4;
 	}
 
 	.navigation
@@ -386,26 +621,11 @@ footer
 	#innovationImage2 { grid-area: innovationImage2; }
 	
 	#innovationImage3 { grid-area: innovationImage3; }
-	  
-}
 
+	/*----Pricing----*/
 
-/*#grid-container
+	#PricingInnovations
 	{
-		background-color: #F8F;
-		border: solid 10px #F0F;
-		padding: 10px;
-		
-		display: grid;
-		grid-template-columns: auto auto auto auto;
-		grid-gap: 10px;
+		display: none;
 	}
-	
-#grid-container > article
-	{
-		background-color: #EEE;
-		border: solid 10px #666;
-		text-align: center;
-		padding: 20px 0;
-		font-size: 30px;
-	}*/
+}
